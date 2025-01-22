@@ -17,6 +17,7 @@ import edu.wpi.first.math.kinematics.SwerveModulePosition;
 
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.geometry.Rotation2d;
+import frc.robot.Constants;
 import frc.robot.Constants.SwerveConstants;
 
 public class SwerveModule {
@@ -82,7 +83,7 @@ public class SwerveModule {
         double turningOutput = turningPidController.calculate(getState().angle.getDegrees(), desiredState.angle.getDegrees());
 
         turningMotor.set(turningOutput);
-        driveMotor.set(desiredState.speedMetersPerSecond); //FIXME: need swerve constants for max speed and voltage
+        driveMotor.set(desiredState.speedMetersPerSecond / Constants.SwerveConstants.kMaxSpeed * Constants.SwerveConstants.kVoltage);
     }
 
     public void setAngle(SwerveModuleState desiredState){
