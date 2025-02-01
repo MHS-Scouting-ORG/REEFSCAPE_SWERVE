@@ -20,6 +20,7 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import frc.robot.Constants;
 import frc.robot.Constants.SwerveConstants;
 
+
 public class SwerveModule {
     public int moduleID; 
 
@@ -39,7 +40,6 @@ public class SwerveModule {
         absoluteEncoder = new CANcoder(moduleConstants.canCoderID); 
         
         
-        
         //CONFIGS 
         driveMotor.getConfigurator().apply(new MotorOutputConfigs().withInverted(moduleConstants.driveMotorInverted));
         driveMotor.getConfigurator().apply(new MotorOutputConfigs().withNeutralMode(NeutralModeValue.Brake)); 
@@ -48,6 +48,7 @@ public class SwerveModule {
 
         absoluteEncoder.getConfigurator().apply(new MagnetSensorConfigs().withAbsoluteSensorDiscontinuityPoint(0.5));
         absoluteEncoder.getConfigurator().apply(new MagnetSensorConfigs().withSensorDirection(SensorDirectionValue.CounterClockwise_Positive));
+        
 
         turningPidController = new PIDController(SwerveConstants.turningKP, SwerveConstants.turningKI, SwerveConstants.turningKD); 
         turningPidController.enableContinuousInput(-180, 180);
@@ -66,7 +67,7 @@ public class SwerveModule {
     }
 
     public Rotation2d getAngle(){
-        return Rotation2d.fromDegrees(turningMotor.getPosition().getValueAsDouble()); //FIXME unsure
+        return Rotation2d.fromDegrees(turningMotor.getPosition().getValueAsDouble());
     }
 
     public SwerveModuleState getState(){

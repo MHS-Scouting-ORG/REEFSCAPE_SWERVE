@@ -34,7 +34,7 @@ public class Constants {
         public static final int kCANID = 9;
         public static final InvertedValue kDriveInverted = InvertedValue.Clockwise_Positive; 
         public static final InvertedValue kTurningInverted = InvertedValue.CounterClockwise_Positive; 
-        public static final double kEncOffset = -102;
+        public static final double kEncOffset = 0;
 
         public static final SwerveModuleConstants constants = new SwerveModuleConstants(kDriveID, kTurningID, kCANID, kDriveInverted, kTurningInverted, kEncOffset);
     }
@@ -45,7 +45,7 @@ public class Constants {
       public static final int kCANID = 10;
       public static final InvertedValue kDriveInverted = InvertedValue.Clockwise_Positive; 
       public static final InvertedValue kTurningInverted = InvertedValue.CounterClockwise_Positive;
-      public static final double kEncOffset = 84;
+      public static final double kEncOffset = 0;
 
       public static final SwerveModuleConstants constants = new SwerveModuleConstants(kDriveID, kTurningID, kCANID, kDriveInverted, kTurningInverted, kEncOffset);
     }
@@ -56,7 +56,7 @@ public class Constants {
       public static final int kCANID = 12;
       public static final InvertedValue kDriveInverted = InvertedValue.Clockwise_Positive; 
       public static final InvertedValue kTurningInverted = InvertedValue.CounterClockwise_Positive; 
-      public static final double kEncOffset = 153;
+      public static final double kEncOffset = 0;
 
       public static final SwerveModuleConstants constants = new SwerveModuleConstants(kDriveID, kTurningID, kCANID, kDriveInverted, kTurningInverted, kEncOffset);
     }
@@ -67,7 +67,7 @@ public class Constants {
       public static final int kCANID = 11;
       public static final InvertedValue kDriveInverted = InvertedValue.Clockwise_Positive; 
       public static final InvertedValue kTurningInverted = InvertedValue.CounterClockwise_Positive; 
-      public static final double kEncOffset = 158;
+      public static final double kEncOffset = 0;
 
       public static final SwerveModuleConstants constants = new SwerveModuleConstants(kDriveID, kTurningID, kCANID, kDriveInverted, kTurningInverted, kEncOffset);
     }
@@ -75,14 +75,14 @@ public class Constants {
     public static final double kPositionConversionFactor = kGearRatio * Math.PI * kWheelDiameter;
     public static final double kVelocityConversionFactor = kPositionConversionFactor / 60;
 
-    public static final double turningKP = 0;
-    public static final double turningKI = 0;
-    public static final double turningKD = 0;
+    public static final double turningKP = 0.0;
+    public static final double turningKI = 0.0;
+    public static final double turningKD = 0.0;
 
 
-    public static final double kP = 0.0048;
-    public static final double kI = 0.0002;
-    public static final double kD = 0.0001;
+    public static final double drivingkP = 0.0;
+    public static final double drivingkI = 0.0;
+    public static final double drivingkD = 0.0;
 
     public static final double kMaxSpeed = 3.6576;
     }
