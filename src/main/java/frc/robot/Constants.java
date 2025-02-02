@@ -80,9 +80,9 @@ public class Constants {
     public static final double turningKD = 0.0;
 
 
-    public static final double drivingkP = 0.0;
-    public static final double drivingkI = 0.0;
-    public static final double drivingkD = 0.0;
+    public static final double drivingKP = 0.0;
+    public static final double drivingKI = 0.0;
+    public static final double drivingKD = 0.0;
 
     public static final double kMaxSpeed = 3.6576;
     }

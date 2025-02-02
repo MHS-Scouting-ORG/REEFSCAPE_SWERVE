@@ -57,7 +57,7 @@ public class SwerveDriveSubsystem extends SubsystemBase{
       this::getChassisSpeeds, 
       this::driveRobotRelative, 
       new PPHolonomicDriveController(
-        new PIDConstants(Constants.SwerveConstants.drivingkP, Constants.SwerveConstants.drivingkI, Constants.SwerveConstants.drivingkD), 
+        new PIDConstants(Constants.SwerveConstants.drivingKP, Constants.SwerveConstants.drivingKI, Constants.SwerveConstants.drivingKD), 
         new PIDConstants(Constants.SwerveConstants.turningKP, Constants.SwerveConstants.turningKI, Constants.SwerveConstants.turningKD)
       ),
        config, 
