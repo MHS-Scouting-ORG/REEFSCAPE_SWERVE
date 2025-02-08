@@ -4,16 +4,17 @@ import com.ctre.phoenix6.signals.InvertedValue;
 
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
+import edu.wpi.first.math.util.Units;
 import frc.robot.subsystems.SwerveModuleConstants;
 
 public class Constants {
     public static class SwerveConstants {
 
-        public static final double kWheelDiameter = 4 * 2.5 / 100;
-        public static final double kTrackWidth = 0.635;
-        public static final double kWheelBase = 0.635;
+        public static final double kWheelDiameter = Units.inchesToMeters(4);
+        public static final double kTrackWidth = Units.inchesToMeters(23.75);
+        public static final double kWheelBase = Units.inchesToMeters(23.75);
 
-        public static final double kGearRatio = 8.14 / 1;
+        public static final double kGearRatio = 6.12 / 1;
 
         public static final double kVoltage = 7.2;
 
@@ -84,6 +85,6 @@ public class Constants {
     public static final double drivingKI = 0.0;
     public static final double drivingKD = 0.0;
 
-    public static final double kMaxSpeed = 3.6576;
+    public static final double kMaxSpeed = Units.feetToMeters(20);
     }
 }
